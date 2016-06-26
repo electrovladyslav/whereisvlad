@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" >
+    <link rel="icon" type="image/png" href="favicon.png">
+	<title>Puerto Rosario</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="clearfix">
+
+			<ul class="flags">
+
+				<li><img class="flag russian" width="20" height="20" src="img/russian_flag.jpg" alt="rus" title="русский" ></li>
+
+				<li><img class="flag english" width="20" height="20" src="img/english_flag.jpg" alt="eng" title="english" ></li>
+
+				<li><img class="flag spain" width="20" height="20" src="img/spanish_flag.jpg" alt="esp" title="español" ></li>								
+			</ul>
+			<h1>m/v "Puerto rosario"</h1>
+		</header>
+		<div class="intro">
+			<!-- <p class="intro_text russian" >Всем привет. На этом сайте вы можете посмотреть, где сейчас находится "Boston Trader". На этом пароходе я работал в конце 2015 года.</p>
+			<p class="intro_text english  hidden">Hello everybody. On this site, You can check, where is now "Boston Trader". I worked on this vessel at the end of 2015.</p>
+			<p class="intro_text spanish  hidden">Hola muchachos. En esta página web se puede ver, dónde está el "Boston Trader". En esta nave, trabajé en el final de 2015. </p> -->
+			<p>Пока здесь есть только карта...</p>
+		</div>
+		<div class="map">
+
+			<script>
+			width='100%';		// the width of the embedded map in pixels or percentage
+			//height='450';		// the height of the embedded map in pixels or percentage
+			shownames='true';	// to display ship names on the map (true or false)
+			// latitude='37.4460';	// the latitude of the center of the map, in decimal degrees
+			// longitude='24.9467';	// the longitude of the center of the map, in decimal degrees
+			zoom='6';		// the zoom level of the map (values between 2 and 17)
+			maptype='3';		// use 0 for Normal map, 1 for Satellite, 2 for Hybrid, 3 for Terrain
+			trackvessel='563736000';	// MMSI of a vessel (note: vessel will be displayed only if within range of the system) - overrides "zoom" option
+			fleet='vlad_1984@list.ru';		// the registered email address of a user-defined fleet (user's default fleet is used)
+			remember='false';	// remember or not the last position of the map (true or false)
+			// language='ru';		// the preferred display language
+			// showmenu=false;		// show or hide the map options menu
+			
+			</script>
+			<script type="text/javascript" src="http://www.marinetraffic.com/js/embed.js">
+			</script>
+			 
+			<!-- <script src="js/embed.js"></script> -->
+		</div>
+		<footer>
+			<div class="produced">
+				<p class="produced_text russian">Сделано с любовью <a href="http://vk.com/electrovladyslav" title="VK">Ермолиным Владиславом</a>, в 2016 году</p>
+<!-- 
+				<p class="produced_text english hidden">Made with love by <a href="http://vk.com/electrovladyslav" title="VK">Yermolin Vladyslav</a>, 2015.</p>
+
+				<p class="produced_text spanish hidden">Hecho con amor <a href="http://vk.com/electrovladyslav" title="VK">Yermolin Vladyslav</a>, en 2015.</p> -->
+			</div>
+		</footer>
+	</div>
+	<!-- 
+	<script>
+		var flags = document.querySelectorAll(".flag");
+		var	intro_text = document.querySelectorAll(".intro_text");
+		var produced_text = document.querySelectorAll(".produced_text");
+		
+		for (var i = 0; i < flags.length; i++) {
+			
+			(function(i){ 	//freeze i in closure 
+				
+				flags[i].addEventListener("click", function(event){
+					event.preventDefault();
+					
+					for (var j = 0; j < flags.length; j++) {
+						
+						if (j == i) {
+							intro_text[j].classList.remove("hidden");
+							produced_text[j].classList.remove("hidden");
+						
+						} else {
+						intro_text[j].classList.add("hidden");
+						produced_text[j].classList.add("hidden");
+						}
+					};
+				})
+			})(i);
+		};
+
+	</script>
+ -->
+</body>
+</html>
