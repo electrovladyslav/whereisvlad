@@ -2,92 +2,169 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css" >
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.png">
 	<title>Puerto Rosario</title>
+			<!-- Boottstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+	<!-- My styles -->
+	<link rel="stylesheet" href="css/mystyles.css">
 </head>
 <body>
-	<div class="wrapper">
-		<header class="clearfix">
-
-			<ul class="flags">
-
-				<li><img class="flag russian" width="20" height="20" src="img/russian_flag.jpg" alt="rus" title="русский" ></li>
-
-				<li><img class="flag english" width="20" height="20" src="img/english_flag.jpg" alt="eng" title="english" ></li>
-
-				<li><img class="flag spain" width="20" height="20" src="img/spanish_flag.jpg" alt="esp" title="español" ></li>								
-			</ul>
-			<h1>m/v "Puerto rosario"</h1>
-		</header>
-		<div class="intro">
-			<!-- <p class="intro_text russian" >Всем привет. На этом сайте вы можете посмотреть, где сейчас находится "Boston Trader". На этом пароходе я работал в конце 2015 года.</p>
-			<p class="intro_text english  hidden">Hello everybody. On this site, You can check, where is now "Boston Trader". I worked on this vessel at the end of 2015.</p>
-			<p class="intro_text spanish  hidden">Hola muchachos. En esta página web se puede ver, dónde está el "Boston Trader". En esta nave, trabajé en el final de 2015. </p> -->
-			<p>Пока здесь есть только карта...</p>
-		</div>
-		<div class="map">
-
-			<script>
-			width='100%';		// the width of the embedded map in pixels or percentage
-			//height='450';		// the height of the embedded map in pixels or percentage
-			shownames='true';	// to display ship names on the map (true or false)
-			// latitude='37.4460';	// the latitude of the center of the map, in decimal degrees
-			// longitude='24.9467';	// the longitude of the center of the map, in decimal degrees
-			zoom='6';		// the zoom level of the map (values between 2 and 17)
-			maptype='3';		// use 0 for Normal map, 1 for Satellite, 2 for Hybrid, 3 for Terrain
-			trackvessel='563736000';	// MMSI of a vessel (note: vessel will be displayed only if within range of the system) - overrides "zoom" option
-			fleet='vlad_1984@list.ru';		// the registered email address of a user-defined fleet (user's default fleet is used)
-			remember='false';	// remember or not the last position of the map (true or false)
-			// language='ru';		// the preferred display language
-			// showmenu=false;		// show or hide the map options menu
-			
-			</script>
-			<script type="text/javascript" src="http://www.marinetraffic.com/js/embed.js">
-			</script>
-			 
-			<!-- <script src="js/embed.js"></script> -->
-		</div>
-		<footer>
-			<div class="produced">
-				<p class="produced_text russian">Сделано с любовью <a href="http://vk.com/electrovladyslav" title="VK">Ермолиным Владиславом</a>, в 2016 году</p>
-<!-- 
-				<p class="produced_text english hidden">Made with love by <a href="http://vk.com/electrovladyslav" title="VK">Yermolin Vladyslav</a>, 2015.</p>
-
-				<p class="produced_text spanish hidden">Hecho con amor <a href="http://vk.com/electrovladyslav" title="VK">Yermolin Vladyslav</a>, en 2015.</p> -->
+	<header class="jumbotron">
+		<div class="contaner">
+			<div class="row row-header">
+				<div class="col-xs-12 col-sm-4"> 
+					<img class="img-logo img-responsive img-circle" src="img/logo2_sm.jpg" alt="Puerto ship">
+				</div>
+				<div class="col-xs-12 col-sm-8">
+					<h1 class="text-center">m/v "Puerto rosario"</h1>
+					<p>Довольно молодой (построен в 2014) китайский балкерок, с четырьмя кранами, на котором я сейчас работаю. Немного информации о нём.</p>
+				</div>
 			</div>
-		</footer>
-	</div>
-	<!-- 
-	<script>
-		var flags = document.querySelectorAll(".flag");
-		var	intro_text = document.querySelectorAll(".intro_text");
-		var produced_text = document.querySelectorAll(".produced_text");
-		
-		for (var i = 0; i < flags.length; i++) {
-			
-			(function(i){ 	//freeze i in closure 
-				
-				flags[i].addEventListener("click", function(event){
-					event.preventDefault();
-					
-					for (var j = 0; j < flags.length; j++) {
-						
-						if (j == i) {
-							intro_text[j].classList.remove("hidden");
-							produced_text[j].classList.remove("hidden");
-						
-						} else {
-						intro_text[j].classList.add("hidden");
-						produced_text[j].classList.add("hidden");
-						}
-					};
-				})
-			})(i);
-		};
+		</div>
+	</header>
+	<div class="container">
+		<div class="row row-content">
+			<div class="col-xs-12 intro">
+				<p>Онлайн-карта с позицией моего парохода. </p>
+			</div>
+			<div class="col-xs-12 map">
+				<script src="js/map.js"></script>
+				<script src="https://www.marinetraffic.com/js/embed.js">
+				</script>
+			</div>
+		</div>
+		<div class="row row-content">
+			<h2 class="description-header col-xs-12 text-center">Расписание портов</h2>
+			<div class="description-text col-xs-12 col-sm-3">
+				<p class="text-justify">Здесь можно посмотреть, в каких портах наше судно было в прошлом, и в какие собирается заглянуть. Предстоящие даты - приблизительны. </p>
+			</div>
 
-	</script>
- -->
+			<div class="col-xs-12 col-sm-8 co-sm-offset-1">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<tr>
+							<th>&nbsp;</th>
+							<th>Порт</th>
+							<th>Страна</th>
+							<th>Заход</th>
+							<th>Отход</th>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port">Вишихапатам</td>
+							<td class="contry">Индия</td>
+							<td class="arrival"><time datetmime="2016-08-16">16 Августа</time></td>
+							<td class="departure"><time datetmime="2016-08-23">23 Августа</time></td>
+						</tr>
+						<tr class="row-progress">
+							<td>Прогресс морского перехода</td>
+							<td colspan="4">
+								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%;">20%</div>
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Хьюстон</del></td>
+							<td class="contry">США</td>
+							<td class="arrival"><time datetmime="2016-07-04">4 Июля</time></td>
+							<td class="departure"><time datetmime="2016-07-06">6 Июля</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Филадельфия</del></td>
+							<td class="contry">США</td>
+							<td class="arrival"><time datetmime="2016-06-25">25 Июня</time></td>
+							<td class="departure"><time datetmime="2016-06-26">26 Июня</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Тампа</del></td>
+							<td class="contry">США</td>
+							<td class="arrival"><time datetmime="2016-06-20">20 Июня</time></td>
+							<td class="departure"><time datetmime="2016-06-20">20 Июня</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Новый Орлеан</del></td>
+							<td class="contry">США</td>
+							<td class="arrival"><time datetmime="2016-06-14">14 Июня</time></td>
+							<td class="departure"><time datetmime="2016-06-18">18 Июня</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Хьюстон</del> <span class="label label-primary label-sm">я прилетел</span> </td>
+							<td class="contry">США</td>
+							<td class="arrival"><time datetmime="2016-06-01">1 Июня</time></td>
+							<td class="departure"><time datetmime="2016-06-12">12 Июня</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Панамский канал</del></td>
+							<td class="contry">Панама</td>
+							<td class="arrival"><time datetmime="2016-05-26">26 Мая</time></td>
+							<td class="departure"><time datetmime="2016-05-29">29 Мая</time></td>
+						</tr>
+ 						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Йокохама</del></td>
+							<td class="contry">Япония</td>
+							<td class="arrival"><time datetmime="2016-04-19">19 Апреля</time></td>
+							<td class="departure"><time datetmime="2016-04-25">25 Апреля</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Каошунг</del></td>
+							<td class="contry">Тайвань</td>
+							<td class="arrival"><time datetmime="2016-03-28">28 Марта</time></td>
+							<td class="departure"><time datetmime="2016-04-11">11 Апреля</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Мачонг</del></td>
+							<td class="contry">Китай</td>
+							<td class="arrival"><time datetmime="2016-03-06">6 Марта</time></td>
+							<td class="departure"><time datetmime="2016-03-26">26 Марта</time></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="port"><del>Сингапур</del></td>
+							<td class="contry">Сингапур</td>
+							<td class="arrival"><time datetmime="2016-03-01">1 Марта</time></td>
+							<td class="departure"><time datetmime="2016-03-01">1 Марта</time></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="row-footer">
+		<div class="container">
+			<div class="row">
+				<div class="produced col-xs-12 col-md-8">
+					<p class="produced-text text-center">Сделано с любовью <strong>Ермолиным Владиславом</strong>, в 2016 году</p>
+				</div>
+				<div class="socials col-xs-12 col-md-4">
+					<div class="text-center">
+                        <a class="btn btn-social-icon btn-vk" href="http://electrovladyslav.vk.com/" title="Contact me">
+                        	<i class="fa fa-vk"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-github" href="http://github.com/electrovladyslav" title="Fork me">
+                        	<i class="fa fa-github"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-twitter" href="mailto:vlad_1984@list.ru" title="Mail me">
+                        	<i class="fa fa-envelope-o"></i>
+                        </a>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/table.js"></script>
 </body>
 </html>
