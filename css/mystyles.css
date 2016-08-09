@@ -45,11 +45,11 @@ body{
 	margin: auto auto;
 }
 
-/*.map {
+.map {
 	min-height: 450px;
 	background-color: gray;
 }
-
+/*
 .container {
 	background-color: #f3f3f3;
 }*/
@@ -64,3 +64,18 @@ body{
  .socials  {
 	margin-top: 10px;
 }
+
+#myScrollspy {
+	padding-top: 50px;
+}
+.affix {
+	top: 50px;
+}
+.schedule-body .signin {
+	text-align: right;
+}
+
+.port.leaved {
+    text-decoration: line-through;
+}
+
