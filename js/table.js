@@ -1,13 +1,13 @@
 "use strict";
 
-var scheduleBody = document.querySelector('.schedule-body');
 var ports = document.querySelectorAll('.port');
 
 var arrivals = document.querySelectorAll('.arrival time');
 var departures = 
 	document.querySelectorAll('.departure time');
+var tbody = document.querySelector('.schedule-body');
 
-var now = new Date(); //2016, 2, 4
+var now = new Date();
 
 for (var i = 0; i < arrivals.length; i++) {
 	var arrivalDate =  
@@ -36,20 +36,30 @@ for (var i = 0; i < arrivals.length; i++) {
 for (++i; i < ports.length; i++) {
 	ports[i].classList.add('leaved');
 };
-
+/**
+*
+*Вставляет в таблицу строку с прогрессом стоянки в порту/морского перехода 
+*	после строки текущего порта
+*
+* @param {number} i номер строки текущего порта
+* @param {string} position "Стоянка в порту"/"Морской переход"
+* @param {object} startDate объект даты начала процесса
+* @param {object} finishDate объект даты конца процесса
+* 
+*/
 function showProgress (i, position, startDate, finishDate) {
 	var voyageProgress 
-		=Math.round( (1 - (finishDate - now)/(finishDate - startDate)) * 100 );
+		=Math.round((1 - (finishDate - now)/(finishDate - startDate)) * 100);
+	var progressBarMin;
+	var rowProgress;
 
 	voyageProgress = (voyageProgress > 100) ? 100 : voyageProgress;
 	voyageProgress = (voyageProgress < 0) ? 0 : voyageProgress;
-	var progressBarMin = (voyageProgress < 10) ? 10 : voyageProgress;
+	progressBarMin = (voyageProgress < 10) ? 10 : voyageProgress;
 
-	//progressBar.innerHTML = voyageProgress + "%";
-	var rowProgress = document.createElement('tr');
+	rowProgress = document.createElement('tr');
 	rowProgress.className = 'row-progress';
 	rowProgress.innerHTML = '<td>' + position + '</td><td colspan="4"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="' + voyageProgress + '" aria-valuemin="0" aria-valuemax="100" style="width:' + progressBarMin + '%;">' + voyageProgress + '%</div></td>'
 
-	scheduleBody.insertBefore(rowProgress, arrivals[i].parentNode.parentNode.nextElementSibling)
-
+	tbody.insertBefore(rowProgress, ports[i].parentNode.nextElementSibling);
 }
