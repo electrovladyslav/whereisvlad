@@ -79,3 +79,33 @@ body{
     text-decoration: line-through;
 }
 
+.carousel {
+	background: #59b6ca;
+}
+
+.carousel .item {
+	height: 300px;
+}
+
+.item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 300px;
+}
+
+#carouselButtons {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+.modal-dialog {
+	width: 90%;
+}
+.big-img > img {
+	margin: 5px auto;
+}
+
+.thumbs {
+	text-align: center;
+}

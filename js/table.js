@@ -3,8 +3,7 @@
 var ports = document.querySelectorAll('.port');
 
 var arrivals = document.querySelectorAll('.arrival time');
-var departures = 
-	document.querySelectorAll('.departure time');
+var departures = document.querySelectorAll('.departure time');
 var tbody = document.querySelector('.schedule-body');
 
 var now = new Date();
@@ -45,7 +44,8 @@ for (++i; i < ports.length; i++) {
 * @param {string} position "Стоянка в порту"/"Морской переход"
 * @param {object} startDate объект даты начала процесса
 * @param {object} finishDate объект даты конца процесса
-* 
+* @return {void}	??? 
+*
 */
 function showProgress (i, position, startDate, finishDate) {
 	var voyageProgress 
