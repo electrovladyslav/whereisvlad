@@ -1,20 +1,40 @@
-function swictLang(lang) {
+$(document).ready(function () {
     "use strict";
+    var langStored = localStorage.getItem('lang');
 
-    var ruText = $('.lang-ru');
-    var enText = $('.lang-en');
+    $('.flag').click(function (event) {
+        swictLang(event.target.dataset.lang);
+    });
 
-    if (lang == 'ru') {
-        ruText.removeClass('hide');
-        enText.addClass('hide');
-    } else {
-        ruText.addClass('hide');
-        enText.removeClass('hide');
+    if (langStored === 'en') {
+        $('.flag-en').click();
+    };
+
+    function swictLang(lang) {
+
+        var ruText = $('.lang-ru');
+        var enText = $('.lang-en');
+
+        switch (lang) {
+        case 'en':
+            enText.removeClass('hide');
+            ruText.addClass('hide');
+
+            $('.flag-en').addClass('active');
+            $('.flag-ru').removeClass('active');
+
+            localStorage.setItem('lang', 'en');
+            break;
+
+        // case 'ru':
+        default:
+            ruText.removeClass('hide');
+            enText.addClass('hide');
+
+            $('.flag-ru').addClass('active');
+            $('.flag-en').removeClass('active');
+
+            localStorage.setItem('lang', 'ru');
+        }
     }
-
-}
-
-$('.flag').click(function (event) {
-    $('.flag').toggleClass('active');
-    swictLang(event.target.dataset.lang);
 });
