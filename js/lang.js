@@ -7,7 +7,7 @@ $(document).ready(function () {
     });
 
     if (langStored === 'en') {
-        $('.flag-en').click();
+        swictLang('en');
     };
 
     function swictLang(lang) {
