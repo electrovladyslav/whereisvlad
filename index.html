@@ -4,27 +4,26 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 	<title>Puerto Rosario</title>
 			<!-- Boottstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="css/bootstrap-social.css" rel="stylesheet">
 	<!-- My styles -->
 	<link rel="stylesheet" href="css/mystyles.css">
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="250">
-	
+
 	<header class="jumbotron">
 		<div class="container">
-			
+
 			<div class="flags">
 				<div class="flags-text">
 					<span class="lang lang-ru">Выбери язык</span>
 					<span class="lang lang-en hide">Choose language</span>
 				</div>
-
 				<div class="btn-group" role="group" aria-label="Language">
 					<button class="flag flag-ru btn btn-success active" data-lang="ru">RUS</button>
 					<button class="flag flag-en btn btn-info" data-lang="en">ENG</button>
@@ -32,10 +31,10 @@
 			</div>
 
 			<div class="row row-header">
-				<div class="col-xs-12 col-sm-4"> 
+				<div class="col-xs-12 col-sm-4">
 					<img class="img-logo img-responsive img-circle" src="img/logo2_sm.jpg" alt="Puerto ship">
 				</div>
-				
+
 				<div class="col-xs-12 col-sm-8">
 					<h1 class="text-center">m/v "Puerto Rosario"</h1>
 					<p>
@@ -46,7 +45,7 @@
 			</div>
 		</div>
 	</header>
-	
+
 	<div class="container">
 		<div class="row">
 			<nav class="hidden-xs col-sm-2" id="myScrollspy">
@@ -67,9 +66,9 @@
 						<span class="lang lang-ru">Информация</span>
 						<span class="lang lang-en hide">Tech. Data</span>
 					</a></li>
-					
 				</ul>
 			</nav>
+
 			<div class="col-xs-12 col-sm-10">
 				<div class="row row-content" id="map">
 					<div class="col-xs-12 intro">
@@ -79,8 +78,11 @@
 						</p>
 					</div>
 					<div class="col-xs-12 map">
+						<!-- Этот скрипт со стророннего сайта, если пытаться привести его в порядок
+						(убрать переменные из глобальной области видемости, заменить document.write),
+						всё ломается, и карта не отображает искомый пароход -->
 						<script src="js/map.js"></script>
-					  <!--script src="https://www.marinetraffic.com/js/embed.js"-->
+					  <script src="https://www.marinetraffic.com/js/embed.js">
 						</script>
 					</div>
 				</div>
@@ -94,9 +96,9 @@
 						<p class="text-justify">
 							<span class="lang lang-ru">В этой табличке можно посмотреть, в каких портах наше судно было в прошлом, и в какие собирается заглянуть. Предстоящие даты - приблизительны. Последний раз таблица обновлялась - </span>
 							<span class="lang lang-en hide">In this table shows, which ports our ship visited, and in which she would go. Future dates are approximate. Last update of the table was at</span>
-							<time class="label label-info" datetime="2016-09-10">
-								<span class="lang lang-ru">10 Сентября 2016</span>
-								<span class="lang lang-en hide">10 of September 2016</span>
+							<time class="label label-info" datetime="2016-10-01">
+								<span class="lang lang-ru">01 Октября 2016</span>
+								<span class="lang lang-en hide">01 of October 2016</span>
 							</time>
 						</p>
 					</div>
@@ -125,8 +127,62 @@
 										</th>
 									</tr>
 								</thead>
-								
+
 								<tbody class="schedule-body">
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Какой-то порт</span>
+											<span class="lang lang-en hide">Some port</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Китай</span>
+											<span class="lang lang-en hide">China</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-11-15">
+												<span class="lang lang-ru">15 Ноября</span>
+												<span class="lang lang-en hide">15 of November</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-11-25">
+												<span class="lang lang-ru">25 Ноября</span>
+												<span class="lang lang-en hide">25 of November</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="singnoff">
+											&nbsp;
+											<span class="label label-primary label-sm">
+												<span class="lang lang-ru">я улетел домой</span>
+												<span class="lang lang-en hide">my sign-off port</span>
+											</span>
+										</td>
+										<td class="port">
+											<span class="lang lang-ru">Розарио</span>
+											<span class="lang lang-en hide">Rosario</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Аргентина</span>
+											<span class="lang lang-en hide">Argentina</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-10-01">
+												<span class="lang lang-ru">1 Октября</span>
+												<span class="lang lang-en hide">1 of October</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-10-05">
+												<span class="lang lang-ru">5 Октября</span>
+												<span class="lang lang-en hide">5 of October</span>
+											</time>
+										</td>
+									</tr>
+
 									<tr>
 										<td>&nbsp;</td>
 										<td class="port">
@@ -198,7 +254,7 @@
 											</time>
 										</td>
 									</tr>
-									
+
 									<tr>
 										<td>&nbsp;</td>
 										<td class="port">
@@ -246,7 +302,7 @@
 											</time>
 										</td>
 									</tr>
-									
+
 									<tr>
 										<td>&nbsp;</td>
 										<td class="port">
@@ -270,7 +326,7 @@
 											</time>
 										</td>
 									</tr>
-									
+
 									<tr>
 										<td>&nbsp;</td>
 										<td class="port">
@@ -294,7 +350,7 @@
 											</time>
 										</td>
 									</tr>
-									
+
 									<tr>
 										<td>&nbsp;</td>
 										<td class="port">
@@ -319,10 +375,13 @@
 										</td>
 									</tr>
 									<tr>
-										<td class="signin">&nbsp;<span class="label label-primary label-sm">
-											<span class="lang lang-ru">я сел на пароход</span>
-											<span class="lang lang-en hide">my sign-in port</span>
-										</span></td>
+										<td class="signin">
+											&nbsp;
+											<span class="label label-primary label-sm">
+												<span class="lang lang-ru">я сел на пароход</span>
+												<span class="lang lang-en hide">my sign-in port</span>
+											</span>
+										</td>
 										<td class="port">
 											<span class="lang lang-ru">Хьюстон</span>
 											<span class="lang lang-en hide">Houston</span>
@@ -466,7 +525,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 
 
 
@@ -488,7 +547,7 @@
 									<div class="carousel-caption">
 										<h2>
 											<span class="lang lang-ru">Перелёт</span>
-											<span class="lang lang-en hide">Airports</span>											
+											<span class="lang lang-en hide">Airports</span>
 										</h2>
 										<p>
 											<span class="lang lang-ru">Чтобы сесть на пароход, надо сначала до него добраться. Несколько фотографий из аэропортов</span>
@@ -578,13 +637,25 @@
 							</div>
 
 							<div class="modal-body">
+
 								<div class="big-img-cont">
 									<img src="img/air_01.jpg" class="big-img img-responsive"  alt="Flies">
+
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
 								</div>
+
 								<div class="thumbs">
-									<a href="img/air_01.jpg"><img src="img/air_01_thumb.jpg" class="thumb-img-hor img-thumbnail" alt="Flies"></a>
-									<a href="img/air_02.jpg"><img src="img/air_02_thumb.jpg" class="thumb-img-hor img-thumbnail" alt="WiFi in Amster"></a>
-									<a href="img/air_03.jpg"><img src="img/air_03_thumb.jpg" class="thumb-img-hor img-thumbnail" alt="Ocean route"></a>
+									<img src="img/air_01_thumb.jpg" class="img-thumbnail chosen" alt="Flies">
+									<img src="img/air_02_thumb.jpg" class="img-thumbnail" alt="WiFi in Amster">
+									<img src="img/air_03_thumb.jpg" class="img-thumbnail" alt="Ocean route">
 								</div>
 							</div>
 
@@ -606,10 +677,20 @@
 
 							<div class="modal-body">
 								<div class="big-img-cont">
-									<img src="img/ship_01.jpg" class="big-img img-responsive"  alt="Ship"><!-- height="768" width="1024" -->
+									<img src="img/ship_01.jpg" class="big-img img-responsive"  alt="Ship">
+
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
 								</div>
 								<div class="thumbs">
-									<img src="img/ship_01_thumb.jpg" class="img-thumbnail" alt="Ship_01">
+									<img src="img/ship_01_thumb.jpg" class="img-thumbnail chosen" alt="Ship_01">
 									<img src="img/ship_02_thumb.jpg" class="img-thumbnail" alt="Ship_02">
 									<img src="img/ship_03_thumb.jpg" class="img-thumbnail" alt="Ship_03">
 									<img src="img/ship_04_thumb.jpg" class="img-thumbnail" alt="Ship_04">
@@ -633,10 +714,19 @@
 
 							<div class="modal-body">
 								<div class="big-img-cont">
-									<img src="img/burbon_01.jpg" class="big-img img-responsive"  alt="Ship"><!-- height="768" width="1024" -->
+									<img src="img/burbon_01.jpg" class="big-img img-responsive"  alt="Ship">
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
 								</div>
 								<div class="thumbs">
-									<img src="img/burbon_01_thumb.jpg" class="img-thumbnail" alt="burbon_01">
+									<img src="img/burbon_01_thumb.jpg" class="img-thumbnail chosen" alt="burbon_01">
 									<img src="img/burbon_02_thumb.jpg" class="img-thumbnail" alt="burbon_02">
 									<img src="img/burbon_03_thumb.jpg" class="img-thumbnail" alt="burbon_03">
 									<img src="img/burbon_04_thumb.jpg" class="img-thumbnail" alt="burbon_04">
@@ -658,10 +748,20 @@
 
 							<div class="modal-body">
 								<div class="big-img-cont">
-									<img src="img/landscape_01.jpg" class="big-img img-responsive"  alt="Ship"><!-- height="768" width="1024" -->
+									<img src="img/landscape_01.jpg" class="big-img img-responsive"  alt="Ship">
+
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
 								</div>
 								<div class="thumbs">
-									<img src="img/landscape_01_thumb.jpg" class="img-thumbnail" alt="landscape_01">
+									<img src="img/landscape_01_thumb.jpg" class="img-thumbnail chosen" alt="landscape_01">
 									<img src="img/landscape_02_thumb.jpg" class="img-thumbnail" alt="landscape_02">
 									<img src="img/landscape_03_thumb.jpg" class="img-thumbnail" alt="landscape_03">
 									<img src="img/landscape_04_thumb.jpg" class="img-thumbnail" alt="landscape_04">
@@ -677,14 +777,14 @@
 									<img src="img/landscape_14_thumb.jpg" alt="landscape_26" class="img-thumbnail">
 									<img src="img/landscape_15_thumb.jpg" alt="landscape_27" class="img-thumbnail">
 									<img src="img/landscape_16_thumb.jpg" alt="landscape_28" class="img-thumbnail">
-									
+
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="row row-content" id="particulars">	
+				<div class="row row-content" id="particulars">
 					<h2 class="description-header col-xs-12 text-center">
 						<span class="lang lang-ru">Тактико-технические характеристики Puerto Rosario</span>
 						<span class="lang lang-en hide">Ships particulars</span>
@@ -726,7 +826,7 @@
 					                	<span class="lang lang-en hide">Year of building</span>
 					                </dt>
 					                <dd>2014</dd>
-					                
+
 					                <dt>
 					                	<span class="lang lang-ru">Место постройки</span>
 					                	<span class="lang lang-en hide">Place of buildig</span>
@@ -744,7 +844,7 @@
 					                	<span class="lang lang-ru">Сухогруз (балкер)</span>
 					                	<span class="lang lang-en hide">Bulk carrier</span>
 					                </dd>
-					                
+
 					                <dt>
 					                	<span class="lang lang-ru">Судовладелец</span>
 					                	<span class="lang lang-en hide">Ships owner</span>
@@ -778,7 +878,7 @@
 					                	<span class="lang lang-ru">199.9 метров</span>
 					                	<span class="lang lang-en hide">199.9 m</span>
 					                </dd>
-					                
+
 					                <dt>
 					                	<span class="lang lang-ru">Ширина</span>
 					                	<span class="lang lang-en hide">Breadth</span>
@@ -787,7 +887,7 @@
 					                	<span class="lang lang-ru">32 метра</span>
 					                	<span class="lang lang-en hide">32 m</span>
 					                </dd>
-					                
+
 					                <dt>
 					                	<span class="lang lang-ru">Грузоподъёмность</span>
 					                	<span class="lang lang-en hide">Gross Tonnage</span>
@@ -796,7 +896,7 @@
 					                	<span class="lang lang-ru">36 353 т</span>.
 					                	<span class="lang lang-en hide">36 353 t</span>
 					                </dd>
-					                				                                
+
 					                <dt>
 					                	<span class="lang lang-ru">Главный двигатель</span>
 					                	<span class="lang lang-en hide">Main Engine</span>
@@ -819,7 +919,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 	<footer class="row-footer">

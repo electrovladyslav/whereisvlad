@@ -2,14 +2,20 @@ $(document).ready(function () {
     "use strict";
     var langStored = localStorage.getItem('lang');
 
-    $('.flag').click(function (event) {
-        swictLang(event.target.dataset.lang);
-    });
-
     if (langStored === 'en') {
         swictLang('en');
     };
 
+    $('.flag').click(function (event) {
+        swictLang(event.target.dataset.lang);
+    });
+    /**
+    * Переключает язык страницы, показывает текст на одном языке, и скрывает
+    *   текст на другом
+    *
+    * @param {string} lang строка с языком, на который надо переключить
+    * @return {void}  ???
+    */
     function swictLang(lang) {
 
         var ruText = $('.lang-ru');
