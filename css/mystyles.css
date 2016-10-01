@@ -1,11 +1,4 @@
-/*my styles*/
-/*div[class^='col-'] {
-	outline: 1px solid black;
-}*/
 
-.hidden {
-	display: none;
-}
 
 /*courses styles*/
 body{
@@ -13,11 +6,29 @@ body{
     z-index:0;
 }
 
+.flags {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	z-index: 2;
+	padding: 5px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: #fff;
+}
 
+.flags-text {
+	text-align: center;
+	color: black;
+}
 
+/* .flags .flag {
+	padding: 0;
+	border: 0;
+} */
 
 .row-header {
-	margin: 0px auto;
+	margin: 60px auto;
 	padding: 0px auto;
 }
 
@@ -44,16 +55,16 @@ body{
 .jumbotron .img-logo {
 	margin: auto auto;
 }
-/*
+
 .map {
 	min-height: 450px;
-	background-color: gray;
-}*/
+	/*background-color: gray;*/
+}
 /*
 .container {
 	background-color: #f3f3f3;
 }*/
-.description-header, 
+.description-header,
 .description-text {
 	margin-bottom: 20px;
 }
@@ -71,7 +82,8 @@ body{
 .affix {
 	top: 50px;
 }
-.schedule-body .signin {
+.schedule-body .signin,
+.schedule-body .singnoff {
 	text-align: right;
 }
 
@@ -79,3 +91,98 @@ body{
     text-decoration: line-through;
 }
 
+.carousel {
+	background: #59b6ca;
+}
+
+.carousel .item {
+	height: 300px;
+}
+
+.item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 300px;
+}
+
+#carouselButtons {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+.modal-dialog {
+	width: 90%;
+}
+
+.big-img-cont {
+	position: relative;
+	max-width: 1024px;
+	margin: 5px auto;
+}
+
+.big-img {
+	margin: 0 auto;
+}
+
+.gallery-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0);
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.gallery-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+  background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+.gallery-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
+  background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+.gallery-control:hover,
+.gallery-control:focus {
+  color: #fff;
+  text-decoration: none;
+  filter: alpha(opacity=90);
+  outline: 0;
+  opacity: .9;
+}
+
+.gallery-control .glyphicon-chevron-left,
+.gallery-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+}
+
+.thumbs {
+	text-align: center;
+}
+
+.img-thumbnail {
+	cursor: pointer;
+}
+
+.img-thumbnail.chosen {
+	background-color: #4cd9f0;
+}

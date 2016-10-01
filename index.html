@@ -4,55 +4,103 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 	<title>Puerto Rosario</title>
 			<!-- Boottstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="css/bootstrap-social.css" rel="stylesheet">
 	<!-- My styles -->
 	<link rel="stylesheet" href="css/mystyles.css">
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="250">
+
 	<header class="jumbotron">
-		<div class="contaner">
+		<div class="container">
+
+			<div class="flags">
+				<div class="flags-text">
+					<span class="lang lang-ru">Выбери язык</span>
+					<span class="lang lang-en hide">Choose language</span>
+				</div>
+				<div class="btn-group" role="group" aria-label="Language">
+					<button class="flag flag-ru btn btn-success active" data-lang="ru">RUS</button>
+					<button class="flag flag-en btn btn-info" data-lang="en">ENG</button>
+				</div>
+			</div>
+
 			<div class="row row-header">
-				<div class="col-xs-12 col-sm-4"> 
+				<div class="col-xs-12 col-sm-4">
 					<img class="img-logo img-responsive img-circle" src="img/logo2_sm.jpg" alt="Puerto ship">
 				</div>
+
 				<div class="col-xs-12 col-sm-8">
-					<h1 class="text-center">m/v "Puerto rosario"</h1>
-					<p>Довольно молодой (построен в 2014) китайский балкерок, с четырьмя кранами, на котором я сейчас работаю. Немного информации о нём.</p>
+					<h1 class="text-center">m/v "Puerto Rosario"</h1>
+					<p>
+						<span class="lang lang-ru">Довольно молодой (построен в 2014) китайский балкерок, с четырьмя кранами, на котором я сейчас работаю. Немного информации о нём.</span>
+						<span class="lang lang-en hide">Pretty young (2014 building) Chinese bulk carrier with four cargo cranes, on which I'm working now. Some info about her.</span>
+					</p>
 				</div>
 			</div>
 		</div>
 	</header>
+
 	<div class="container">
 		<div class="row">
 			<nav class="hidden-xs col-sm-2" id="myScrollspy">
 				<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="300">
-					<li><a href="#map">Карта</a></li>
-					<li><a href="#schedule">Расписание</a></li>
-					<li><a href="#particulars">Информация</a></li>
+					<li><a href="#map">
+						<span class="lang lang-ru">Карта</span>
+						<span class="lang lang-en hide">Map</span>
+					</a></li>
+					<li><a href="#schedule">
+						<span class="lang lang-ru">Расписание</span>
+						<span class="lang lang-en hide">Schedule</span>
+					</a></li>
+					<li><a href="#myCarousel">
+						<span class="lang lang-ru">Фотографии</span>
+						<span class="lang lang-en hide">Photos</span>
+					</a></li>
+					<li><a href="#particulars">
+						<span class="lang lang-ru">Информация</span>
+						<span class="lang lang-en hide">Tech. Data</span>
+					</a></li>
 				</ul>
 			</nav>
+
 			<div class="col-xs-12 col-sm-10">
 				<div class="row row-content" id="map">
 					<div class="col-xs-12 intro">
-						<p>Онлайн-карта с позицией моего парохода. </p>
+						<p>
+							<span class="lang lang-ru">Онлайн-карта с позицией моего парохода.</span>
+							<span class="lang lang-en hide">On-line map with position of my ship</span>
+						</p>
 					</div>
 					<div class="col-xs-12 map">
+						<!-- Этот скрипт со стророннего сайта, если пытаться привести его в порядок
+						(убрать переменные из глобальной области видемости, заменить document.write),
+						всё ломается, и карта не отображает искомый пароход -->
 						<script src="js/map.js"></script>
-						<script src="https://www.marinetraffic.com/js/embed.js">
+					  <script src="https://www.marinetraffic.com/js/embed.js">
 						</script>
 					</div>
 				</div>
 
 				<div class="row row-content" id="schedule">
-					<h2 class="description-header col-xs-12 text-center">Расписание портов</h2>
+					<h2 class="description-header col-xs-12 text-center">
+						<span class="lang lang-ru">Расписание портов</span>
+						<span class="lang lang-en hide">Ports schedule</span>
+					</h2>
 					<div class="description-text col-xs-12">
-						<p class="text-justify">В этой табличке можно посмотреть, в каких портах наше судно было в прошлом, и в какие собирается заглянуть. Предстоящие даты - приблизительны. Куда пойдём после Гангаварама, пока информации нет.</p>
+						<p class="text-justify">
+							<span class="lang lang-ru">В этой табличке можно посмотреть, в каких портах наше судно было в прошлом, и в какие собирается заглянуть. Предстоящие даты - приблизительны. Последний раз таблица обновлялась - </span>
+							<span class="lang lang-en hide">In this table shows, which ports our ship visited, and in which she would go. Future dates are approximate. Last update of the table was at</span>
+							<time class="label label-info" datetime="2016-10-01">
+								<span class="lang lang-ru">01 Октября 2016</span>
+								<span class="lang lang-en hide">01 of October 2016</span>
+							</time>
+						</p>
 					</div>
 
 					<div class="col-xs-12">
@@ -61,137 +109,752 @@
 								<thead>
 									<tr>
 										<th>&nbsp;</th>
-										<th>Порт</th>
-										<th>Страна</th>
-										<th>Заход</th>
-										<th>Отход</th>
+										<th>
+											<span class="lang lang-ru">Порт</span>
+											<span class="lang lang-en hide">Port</span>
+										</th>
+										<th>
+											<span class="lang lang-ru">Страна</span>
+											<span class="lang lang-en hide">Country</span>
+										</th>
+										<th>
+											<span class="lang lang-ru">Заход</span>
+											<span class="lang lang-en hide">Arrival</span>
+										</th>
+										<th>
+											<span class="lang lang-ru">Отход</span>
+											<span class="lang lang-en hide">Departure</span>
+										</th>
 									</tr>
 								</thead>
+
 								<tbody class="schedule-body">
 									<tr>
 										<td>&nbsp;</td>
-										<td class="port">Гангаварам</td>
-										<td class="contry">Индия</td>
-										<td class="arrival"><time datetmime="2016-08-21">21 Августа</time></td>
-										<td class="departure"><time datetmime="2016-08-23">23 Августа</time></td>
+										<td class="port">
+											<span class="lang lang-ru">Какой-то порт</span>
+											<span class="lang lang-en hide">Some port</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Китай</span>
+											<span class="lang lang-en hide">China</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-11-15">
+												<span class="lang lang-ru">15 Ноября</span>
+												<span class="lang lang-en hide">15 of November</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-11-25">
+												<span class="lang lang-ru">25 Ноября</span>
+												<span class="lang lang-en hide">25 of November</span>
+											</time>
+										</td>
 									</tr>
-									
+
 									<tr>
-										<td>&nbsp;</td>
-										<td class="port">Коломбо</td>
-										<td class="contry">Шри-Ланка</td>
-										<td class="arrival"><time datetmime="2016-08-18">18 Августа</time></td>
-										<td class="departure"><time datetmime="2016-08-19">19 Августа</time></td>
+										<td class="singnoff">
+											&nbsp;
+											<span class="label label-primary label-sm">
+												<span class="lang lang-ru">я улетел домой</span>
+												<span class="lang lang-en hide">my sign-off port</span>
+											</span>
+										</td>
+										<td class="port">
+											<span class="lang lang-ru">Розарио</span>
+											<span class="lang lang-en hide">Rosario</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Аргентина</span>
+											<span class="lang lang-en hide">Argentina</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-10-01">
+												<span class="lang lang-ru">1 Октября</span>
+												<span class="lang lang-en hide">1 of October</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-10-05">
+												<span class="lang lang-ru">5 Октября</span>
+												<span class="lang lang-en hide">5 of October</span>
+											</time>
+										</td>
 									</tr>
 
 									<tr>
 										<td>&nbsp;</td>
-										<td class="port">Хьюстон</td>
-										<td class="contry">США</td>
-										<td class="arrival"><time datetmime="2016-07-04">4 Июля</time></td>
-										<td class="departure"><time datetmime="2016-07-06">6 Июля</time></td>
+										<td class="port">
+											<span class="lang lang-ru">Кейп Таун</span>
+											<span class="lang lang-en hide">Cape Town</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Южная Африка</span>
+											<span class="lang lang-en hide">South Africa</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-09-12">
+												<span class="lang lang-ru">12 Сентября</span>
+												<span class="lang lang-en hide">12 of September</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-09-20">
+												<span class="lang lang-ru">20 Сентября</span>
+												<span class="lang lang-en hide">20 of September</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Маврикий</span>
+											<span class="lang lang-en hide">Mauritius</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Маврикий</span>
+											<span class="lang lang-en hide">Mauritius</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-09-06">
+												<span class="lang lang-ru">6 Сентября</span>
+												<span class="lang lang-en hide">6 of September</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-09-06">
+												<span class="lang lang-ru">6 Сентября</span>
+												<span class="lang lang-en hide">6 of September</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Гангаварам</span>
+											<span class="lang lang-en hide">Gangavaram</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Индия</span>
+											<span class="lang lang-en hide">India</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-08-21">
+												<span class="lang lang-ru">21 Августа</span>
+												<span class="lang lang-en hide">21 of August</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-08-23">
+												<span class="lang lang-ru">23 Августа</span>
+												<span class="lang lang-en hide">23 of August</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Коломбо</span>
+											<span class="lang lang-en hide">Colombo</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Шри-Ланка</span>
+											<span class="lang lang-en hide">Sri Lanka</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-08-18">
+												<span class="lang lang-ru">18 Августа</span>
+												<span class="lang lang-en hide">18 of August</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-08-19">
+												<span class="lang lang-ru">19 Августа</span>
+												<span class="lang lang-en hide">19 of August</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Хьюстон</span>
+											<span class="lang lang-en hide">Houston</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">США</span>
+											<span class="lang lang-en hide">USA</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-07-04">
+												<span class="lang lang-ru">4 Июля</span>
+												<span class="lang lang-en hide">4 of July</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-07-06">
+												<span class="lang lang-ru">6 Июля</span>
+												<span class="lang lang-en hide">6 of July</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Филадельфия</span>
+											<span class="lang lang-en hide">Philadelphia</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">США</span>
+											<span class="lang lang-en hide">USA</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-06-25">
+												<span class="lang lang-ru">25 Июня</span>
+												<span class="lang lang-en hide">25 of June</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-06-26">
+												<span class="lang lang-ru">26 Июня</span>
+												<span class="lang lang-en hide">26 of June</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Тампа</span>
+											<span class="lang lang-en hide">Tampa</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">США</span>
+											<span class="lang lang-en hide">USA</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-06-20">
+												<span class="lang lang-ru">20 Июня</span>
+												<span class="lang lang-en hide">20 of June</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-06-20">
+												<span class="lang lang-ru">20 Июня</span>
+												<span class="lang lang-en hide">20 of June</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Новый Орлеан</span>
+											<span class="lang lang-en hide">New Orlean</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">США</span>
+											<span class="lang lang-en hide">USA</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-06-14">
+												<span class="lang lang-ru">14 Июня</span>
+												<span class="lang lang-en hide">14 of June</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-06-18">
+												<span class="lang lang-ru">18 Июня</span>
+												<span class="lang lang-en hide">18 of June</span>
+											</time>
+										</td>
+									</tr>
+									<tr>
+										<td class="signin">
+											&nbsp;
+											<span class="label label-primary label-sm">
+												<span class="lang lang-ru">я сел на пароход</span>
+												<span class="lang lang-en hide">my sign-in port</span>
+											</span>
+										</td>
+										<td class="port">
+											<span class="lang lang-ru">Хьюстон</span>
+											<span class="lang lang-en hide">Houston</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">США</span>
+											<span class="lang lang-en hide">USA</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-06-01">
+												<span class="lang lang-ru">1 Июня</span>
+												<span class="lang lang-en hide">1 of June</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-06-12">
+												<span class="lang lang-ru">12 Июня</span>
+												<span class="lang lang-en hide">12 of June</span>
+											</time>
+										</td>
 									</tr>
 									<tr>
 										<td>&nbsp;</td>
-										<td class="port">Филадельфия</td>
-										<td class="contry">США</td>
-										<td class="arrival"><time datetmime="2016-06-25">25 Июня</time></td>
-										<td class="departure"><time datetmime="2016-06-26">26 Июня</time></td>
+										<td class="port">
+											<span class="lang lang-ru">Панамский канал</span>
+											<span class="lang lang-en hide">Panama canal</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Панама</span>
+											<span class="lang lang-en hide">Panama</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-05-26">
+												<span class="lang lang-ru">26 Мая</span>
+												<span class="lang lang-en hide">26 of May</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-05-29">
+												<span class="lang lang-ru">29 Мая</span>
+												<span class="lang lang-en hide">29 of May</span>
+											</time>
+										</td>
 									</tr>
-									<tr>
-										<td>&nbsp;</td>
-										<td class="port">Тампа</td>
-										<td class="contry">США</td>
-										<td class="arrival"><time datetmime="2016-06-20">20 Июня</time></td>
-										<td class="departure"><time datetmime="2016-06-20">20 Июня</time></td>
-									</tr>
-									<tr>
-										<td>&nbsp;</td>
-										<td class="port">Новый Орлеан</td>
-										<td class="contry">США</td>
-										<td class="arrival"><time datetmime="2016-06-14">14 Июня</time></td>
-										<td class="departure"><time datetmime="2016-06-18">18 Июня</time></td>
-									</tr>
-									<tr>
-										<td class="signin">&nbsp;<span class="label label-primary label-sm">я сел на пароход</span></td>
-										<td class="port">Хьюстон  </td>
-										<td class="contry">США</td>
-										<td class="arrival"><time datetmime="2016-06-01">1 Июня</time></td>
-										<td class="departure"><time datetmime="2016-06-12">12 Июня</time></td>
-									</tr>
-									<tr>
-										<td>&nbsp;</td>
-										<td class="port">Панамский канал</td>
-										<td class="contry">Панама</td>
-										<td class="arrival"><time datetmime="2016-05-26">26 Мая</time></td>
-										<td class="departure"><time datetmime="2016-05-29">29 Мая</time></td>
-									</tr>
+
 			 						<tr>
 										<td>&nbsp;</td>
-										<td class="port">Йокохама</td>
-										<td class="contry">Япония</td>
-										<td class="arrival"><time datetmime="2016-04-19">19 Апреля</time></td>
-										<td class="departure"><time datetmime="2016-04-25">25 Апреля</time></td>
+										<td class="port">
+											<span class="lang lang-ru">Йокохама</span>
+											<span class="lang lang-en hide">Yokohama</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Япония</span>
+											<span class="lang lang-en hide">Japan</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-04-19">
+												<span class="lang lang-ru">19 Апреля</span>
+												<span class="lang lang-en hide">19 of April</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-04-25">
+												<span class="lang lang-ru">25 Апреля</span>
+												<span class="lang lang-en hide">25 of April</span>
+											</time>
+										</td>
+									</tr>
+
+									<tr>
+										<td>&nbsp;</td>
+										<td class="port">
+											<span class="lang lang-ru">Каошунг</span>
+											<span class="lang lang-en hide">Koushung</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Тайвань</span>
+											<span class="lang lang-en hide">Taiwan</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-03-28">
+												<span class="lang lang-ru">28 Марта</span>
+												<span class="lang lang-en hide">28 of March</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-04-11">
+												<span class="lang lang-ru">11 Апреля</span>
+												<span class="lang lang-en hide">11 of April</span>
+											</time>
+										</td>
 									</tr>
 									<tr>
 										<td>&nbsp;</td>
-										<td class="port">Каошунг</td>
-										<td class="contry">Тайвань</td>
-										<td class="arrival"><time datetmime="2016-03-28">28 Марта</time></td>
-										<td class="departure"><time datetmime="2016-04-11">11 Апреля</time></td>
+										<td class="port">
+											<span class="lang lang-ru">Мачонг</span>
+											<span class="lang lang-en hide">Machong</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Китай</span>
+											<span class="lang lang-en hide">China</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-03-06">
+												<span class="lang lang-ru">6 Марта</span>
+												<span class="lang lang-en hide">6 of March</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-03-26">
+												<span class="lang lang-ru">26 Марта</span>
+												<span class="lang lang-en hide">26 of March</span>
+											</time>
+										</td>
 									</tr>
 									<tr>
 										<td>&nbsp;</td>
-										<td class="port">Мачонг</td>
-										<td class="contry">Китай</td>
-										<td class="arrival"><time datetmime="2016-03-06">6 Марта</time></td>
-										<td class="departure"><time datetmime="2016-03-26">26 Марта</time></td>
-									</tr>
-									<tr>
-										<td>&nbsp;</td>
-										<td class="port">Сингапур</td>
-										<td class="contry">Сингапур</td>
-										<td class="arrival"><time datetmime="2016-03-01">1 Марта</time></td>
-										<td class="departure"><time datetmime="2016-03-01">1 Марта</time></td>
+										<td class="port">
+											<span class="lang lang-ru">Сингапур</span>
+											<span class="lang lang-en hide">Singapore</span>
+										</td>
+										<td class="country">
+											<span class="lang lang-ru">Сингапур</span>
+											<span class="lang lang-en hide">Singapore</span>
+										</td>
+										<td class="arrival">
+											<time datetime="2016-03-01">
+												<span class="lang lang-ru">1 Марта</span>
+												<span class="lang lang-en hide">1 of March</span>
+											</time>
+										</td>
+										<td class="departure">
+											<time datetime="2016-03-01">
+												<span class="lang lang-ru">1 Марта</span>
+												<span class="lang lang-en hide">1 of March</span>
+											</time>
+										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
-				<script src="js/table.js"></script>
-				<div class="row row-content" id="particulars">	
-					<h2 class="description-header col-xs-12 text-center">Тактико-технические характеристики Puerto Rosario</h2>
+
+
+
+
+
+				<div class="row row-content">
+					<div class="col-xs-12">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+								<li data-target="#myCarousel" data-slide-to="3"></li>
+							</ol>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="img/slide_300px_01.jpg" alt="Flyes" class="img-responsive">
+									<div class="carousel-caption">
+										<h2>
+											<span class="lang lang-ru">Перелёт</span>
+											<span class="lang lang-en hide">Airports</span>
+										</h2>
+										<p>
+											<span class="lang lang-ru">Чтобы сесть на пароход, надо сначала до него добраться. Несколько фотографий из аэропортов</span>
+											<span class="lang lang-en hide">Some photos from airport on my way to/from ship.</span>
+										</p>
+										<p>
+											<a class="btn btn-primary bts-xs" href="#"  data-toggle="modal" data-target="#galleryModal_01">
+												<span class="lang lang-ru">Больше фоток &raquo;</span>
+												<span class="lang lang-en hide">More &raquo;</span>
+											</a>
+										</p>
+									</div>
+								</div>
+
+								<div class="item">
+									<img src="img/slide_300px_02.jpg" alt="Puerto Rosario" class="img-responsive">
+									<div class="carousel-caption">
+										<h2>
+											Puerto Rosario
+										</h2>
+										<p>
+											<span class="lang lang-ru">Фотографии парохода днём и ночью. На погрузке и на выгрузке. В порту и на переходе</span>
+											<span class="lang lang-en hide">Ships photos at day and night. On loading and discharging. At port and during seapassage</span>
+										</p>
+										<a class="btn btn-primary bts-xs" href="#"  data-toggle="modal" data-target="#galleryModal_02">
+											<span class="lang lang-ru">Больше фоток &raquo;</span>
+											<span class="lang lang-en hide">More &raquo;</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="item">
+									<img src="img/slide_300px_03.jpg" alt="Bourbon street" class="img-responsive">
+									<div class="carousel-caption">
+										<h2>Bourbon street</h2>
+										<p>
+											<span class="lang lang-ru">Моя вечерняя прогулка (и единственная за этот рейс прогулка вообще) про главной джазовой улице США</span>
+											<span class="lang lang-en hide">My night walking through main jazz street of USA.</span>
+										</p>
+										<a class="btn btn-primary bts-xs" href="#"  data-toggle="modal" data-target="#galleryModal_03">
+											<span class="lang lang-ru">Больше фоток &raquo;</span>
+											<span class="lang lang-en hide">More &raquo;</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="item">
+									<img src="img/slide_300px_04.jpg" alt="Sea views" class="img-responsive">
+									<div class="carousel-caption">
+										<h2>
+											<span class="lang lang-ru">Пейзажи</span>
+											<span class="lang lang-en hide">Landscapes</span>
+										</h2>
+										<p>
+											<span class="lang lang-ru">В этом рейсе у меня не часто получается выбраться погулять на берег. Любуюсь окружающими пейзажами с борта корабля. Присоединяйтесь.</span>
+											<span class="lang lang-en hide">There are not so many opportunities for land-walking in this voyage. So I'm admiring the landscapes from onboard the ship. You could join.</span>
+										</p>
+										<a class="btn btn-primary bts-xs" href="#"  data-toggle="modal" data-target="#galleryModal_04">
+											<span class="lang lang-ru">Больше фоток &raquo;</span>
+											<span class="lang lang-en hide">More &raquo;</span>
+										</a>
+									</div>
+								</div>
+
+								<!-- Controls -->
+								<a href="#myCarousel" class="left carousel-control" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previos</span>
+								</a>
+								<a href="#myCarousel" class="right carousel-control" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="galleryModal_01" class="gallery-modal modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content -->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Галерея 1. Перелёты.</h4>
+							</div>
+
+							<div class="modal-body">
+
+								<div class="big-img-cont">
+									<img src="img/air_01.jpg" class="big-img img-responsive"  alt="Flies">
+
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+
+								<div class="thumbs">
+									<img src="img/air_01_thumb.jpg" class="img-thumbnail chosen" alt="Flies">
+									<img src="img/air_02_thumb.jpg" class="img-thumbnail" alt="WiFi in Amster">
+									<img src="img/air_03_thumb.jpg" class="img-thumbnail" alt="Ocean route">
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" data-togle="modal" data-target="#galleryModal_04">Prev</button>
+								<button type="button" data-togle="modal" data-target="#galleryModal_02">Next</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="galleryModal_02" class="gallery-modal modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Галерея 2. Puerto Rosario.</h4>
+							</div>
+
+							<div class="modal-body">
+								<div class="big-img-cont">
+									<img src="img/ship_01.jpg" class="big-img img-responsive"  alt="Ship">
+
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+								<div class="thumbs">
+									<img src="img/ship_01_thumb.jpg" class="img-thumbnail chosen" alt="Ship_01">
+									<img src="img/ship_02_thumb.jpg" class="img-thumbnail" alt="Ship_02">
+									<img src="img/ship_03_thumb.jpg" class="img-thumbnail" alt="Ship_03">
+									<img src="img/ship_04_thumb.jpg" class="img-thumbnail" alt="Ship_04">
+									<img src="img/ship_05_thumb.jpg" class="img-thumbnail" alt="Ship_05">
+									<img src="img/ship_06_thumb.jpg" class="img-thumbnail" alt="Ship_06">
+									<img src="img/ship_07_thumb.jpg" class="img-thumbnail" alt="Ship_07">
+									<img src="img/ship_08_thumb.jpg" class="img-thumbnail" alt="Ship_08">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="galleryModal_03" class="gallery-modal modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Галерея 3. Burbon street.</h4>
+							</div>
+
+							<div class="modal-body">
+								<div class="big-img-cont">
+									<img src="img/burbon_01.jpg" class="big-img img-responsive"  alt="Ship">
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+								<div class="thumbs">
+									<img src="img/burbon_01_thumb.jpg" class="img-thumbnail chosen" alt="burbon_01">
+									<img src="img/burbon_02_thumb.jpg" class="img-thumbnail" alt="burbon_02">
+									<img src="img/burbon_03_thumb.jpg" class="img-thumbnail" alt="burbon_03">
+									<img src="img/burbon_04_thumb.jpg" class="img-thumbnail" alt="burbon_04">
+									<img src="img/burbon_05_thumb.jpg" class="img-thumbnail" alt="burbon_05">
+									<img src="img/burbon_06_thumb.jpg" class="img-thumbnail" alt="burbon_06">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="galleryModal_04" class="gallery-modal modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Галерея 4. Пейзажи.</h4>
+							</div>
+
+							<div class="modal-body">
+								<div class="big-img-cont">
+									<img src="img/landscape_01.jpg" class="big-img img-responsive"  alt="Ship">
+
+									<!-- Controls -->
+									<a href="#galleryModal_01" class="left gallery-control" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previos</span>
+									</a>
+									<a href="#galleryModal_01" class="right gallery-control" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+								<div class="thumbs">
+									<img src="img/landscape_01_thumb.jpg" class="img-thumbnail chosen" alt="landscape_01">
+									<img src="img/landscape_02_thumb.jpg" class="img-thumbnail" alt="landscape_02">
+									<img src="img/landscape_03_thumb.jpg" class="img-thumbnail" alt="landscape_03">
+									<img src="img/landscape_04_thumb.jpg" class="img-thumbnail" alt="landscape_04">
+									<img src="img/landscape_05_thumb.jpg" class="img-thumbnail" alt="landscape_05">
+									<img src="img/landscape_06_thumb.jpg" class="img-thumbnail" alt="landscape_06">
+									<img src="img/landscape_07_thumb.jpg" class="img-thumbnail" alt="landscape_07">
+									<img src="img/landscape_08_thumb.jpg" class="img-thumbnail" alt="landscape_08">
+									<img src="img/landscape_09_thumb.jpg" class="img-thumbnail" alt="landscape_09">
+									<img src="img/landscape_10_thumb.jpg" class="img-thumbnail" alt="landscape_10">
+									<img src="img/landscape_11_thumb.jpg" class="img-thumbnail" alt="landscape_11">
+									<img src="img/landscape_12_thumb.jpg" class="img-thumbnail" alt="landscape_12">
+									<img src="img/landscape_13_thumb.jpg" alt="landscape_25" class="img-thumbnail">
+									<img src="img/landscape_14_thumb.jpg" alt="landscape_26" class="img-thumbnail">
+									<img src="img/landscape_15_thumb.jpg" alt="landscape_27" class="img-thumbnail">
+									<img src="img/landscape_16_thumb.jpg" alt="landscape_28" class="img-thumbnail">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-content" id="particulars">
+					<h2 class="description-header col-xs-12 text-center">
+						<span class="lang lang-ru">Тактико-технические характеристики Puerto Rosario</span>
+						<span class="lang lang-en hide">Ships particulars</span>
+					</h2>
 
 					<div class="col-xs-12 col-sm-6">
 					    <div class="panel panel-primary">
 					        <div class="panel-heading">
-					            <h3 class="panel-title">Информация</h3>
+					            <h3 class="panel-title">
+					            	<span class="lang lang-ru">Информация</span>
+					            	<span class="lang lang-en hide">Information</span>
+					            </h3>
 					        </div>
 					        <div class="panel-body">
 					            <dl class="dl-horizontal">
-					                <dt>Название</dt>
+					                <dt>
+					                	<span class="lang lang-ru">Название</span>
+					                	<span class="lang lang-en hide">Ships name</span>
+					                </dt>
 					                <dd>Puerto Rosario</dd>
 
-					                <dt>I.M.O Номер</dt>
+					                <dt>
+					                	<span class="lang lang-ru">I.M.O Номер</span>
+					                	<span class="lang lang-en hide">I.M.O. number</span>
+					                </dt>
 					                <dd>9656084</dd>
 
-					                <dt>Флаг</dt>
-					                <dd>Сингапур</dd>
+					                <dt>
+					                	<span class="lang lang-ru">Флаг</span>
+					                	<span class="lang lang-en hide">Flag</span>
+					                </dt>
+					                <dd>
+					                	<span class="lang lang-ru">Сингапур</span>
+					                	<span class="lang lang-en hide">Singapore</span>
+					                </dd>
 
-					                <dt>Год постройки</dt>
+					                <dt>
+					                	<span class="lang lang-ru">Год постройки</span>
+					                	<span class="lang lang-en hide">Year of building</span>
+					                </dt>
 					                <dd>2014</dd>
-					                
-					                <dt>Место постройки</dt>
-					                <dd>Китай</dd>
 
-					                <dt>Тип</dt>
-					                <dd>Сухогруз (балкер)</dd>
-					                
-					                <dt>Судовладелец</dt>
+					                <dt>
+					                	<span class="lang lang-ru">Место постройки</span>
+					                	<span class="lang lang-en hide">Place of buildig</span>
+					                </dt>
+					                <dd>
+					                	<span class="lang lang-ru">Китай</span>
+					                	<span class="lang lang-en hide">China</span>
+					                </dd>
+
+					                <dt>
+					                	<span class="lang lang-ru">Тип</span>
+					                	<span class="lang lang-en hide">Type</span>
+					                </dt>
+					                <dd>
+					                	<span class="lang lang-ru">Сухогруз (балкер)</span>
+					                	<span class="lang lang-en hide">Bulk carrier</span>
+					                </dd>
+
+					                <dt>
+					                	<span class="lang lang-ru">Судовладелец</span>
+					                	<span class="lang lang-en hide">Ships owner</span>
+					                </dt>
 					                <dd>Lomar shipping</dd>
 
-					                <dt>Менеджер</dt>
+					                <dt>
+					                	<span class="lang lang-ru">Менеджер</span>
+					                	<span class="lang lang-en hide">Manager</span>
+					                </dt>
 					                <dd>Uniteam Marine</dd>
 					            </dl>
 					        </div>
@@ -200,54 +863,86 @@
 					<div class="col-xs-12 col-sm-6">
 					    <div class="panel panel-info">
 					        <div class="panel-heading">
-					            <h3 class="panel-title">Технические данные</h3>
+					            <h3 class="panel-title">
+					            	<span class="lang lang-ru">Технические данные</span>
+					            	<span class="lang lang-en hide">Technical data</span>
+					            </h3>
 					        </div>
 					        <div class="panel-body">
 					            <dl class="dl-horizontal">
-					                <dt>Длина</dt>
-					                <dd>199.9 метров</dd>
-					                
-					                <dt>Ширина</dt>
-					                <dd>18.5 метров</dd>
-					                
-					                <dt>Грузоподъёмность</dt>
-					                <dd>36 353 т.</dd>
-					                
-					                <dt>Водоизмещение</dt>
-					                <dd>76 888 т.</dd>
-					                
-					                <dt>Главный двигатель</dt>
-					                <dd>MAN B&amp;W 5S60ME-C8.2 (Tier II), 8050kW</dd>
-									
-									<dt>Генераторы</dt>
-					                <dd>Daihatsu 6KD20e 720kW - 3 шт.</dd>
+					                <dt>
+					                	<span class="lang lang-ru">Длина</span>
+					                	<span class="lang lang-en hide">Length</span>
+					                </dt>
+					                <dd>
+					                	<span class="lang lang-ru">199.9 метров</span>
+					                	<span class="lang lang-en hide">199.9 m</span>
+					                </dd>
+
+					                <dt>
+					                	<span class="lang lang-ru">Ширина</span>
+					                	<span class="lang lang-en hide">Breadth</span>
+					                </dt>
+					                <dd>
+					                	<span class="lang lang-ru">32 метра</span>
+					                	<span class="lang lang-en hide">32 m</span>
+					                </dd>
+
+					                <dt>
+					                	<span class="lang lang-ru">Грузоподъёмность</span>
+					                	<span class="lang lang-en hide">Gross Tonnage</span>
+					                </dt>
+					                <dd>
+					                	<span class="lang lang-ru">36 353 т</span>.
+					                	<span class="lang lang-en hide">36 353 t</span>
+					                </dd>
+
+					                <dt>
+					                	<span class="lang lang-ru">Главный двигатель</span>
+					                	<span class="lang lang-en hide">Main Engine</span>
+					                </dt>
+					                <dd>
+					                	MAN B&amp;W 5S60ME-C8.2 (Tier II), 8050kW
+					                </dd>
+
+													<dt>
+														<span class="lang lang-ru">Генераторы</span>
+														<span class="lang lang-en hide">Auxiliary engines</span>
+													</dt>
+					                <dd>
+					                	<span class="lang lang-ru">Daihatsu 6KD20e 720kW - 3 шт</span>.
+					                	<span class="lang lang-en hide">Daihatsu 6KD20e 720kW x 3pcs.</span>
+					                </dd>
 					            </dl>
 					        </div>
 					    </div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 	<footer class="row-footer">
 		<div class="container">
 			<div class="row">
 				<div class="produced col-xs-12 col-md-8">
-					<p class="produced-text text-center">Сделано с любовью <strong>Ермолиным Владиславом</strong>, в 2016 году</p>
+					<p class="produced-text text-center">
+						<span class="lang lang-ru">Сделано с любовью <strong>Ермолиным Владиславом</strong>, в 2016 году</span>
+						<span class="lang lang-en hide">Produced with love by <strong>Yermolin Vladyslav</strong>, 2016</span>
+					</p>
 				</div>
 				<div class="socials col-xs-12 col-md-4">
 					<div class="text-center">
-                        <a class="btn btn-social-icon btn-vk" href="http://electrovladyslav.vk.com/" title="Contact me">
-                        	<i class="fa fa-vk"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-github" href="http://github.com/electrovladyslav" title="Fork me">
-                        	<i class="fa fa-github"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-twitter" href="mailto:vlad_1984@list.ru" title="Mail me">
-                        	<i class="fa fa-envelope-o"></i>
-                        </a>
-                    </div>
+            <a class="btn btn-social-icon btn-vk" href="http://electrovladyslav.vk.com/" title="Contact me">
+            	<i class="fa fa-vk"></i>
+            </a>
+            <a class="btn btn-social-icon btn-github" href="http://github.com/electrovladyslav" title="Fork me">
+            	<i class="fa fa-github"></i>
+            </a>
+            <a class="btn btn-social-icon btn-twitter" href="mailto:vlad_1984@list.ru" title="Mail me">
+            	<i class="fa fa-envelope-o"></i>
+            </a>
+	        </div>
 				</div>
 			</div>
 		</div>
@@ -256,6 +951,8 @@
 	<script src="js/jquery-1.11.0.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-	
+	<script src="js/table.js"></script>
+	<script src="js/gallery.js"></script>
+	<script src="js/lang.js"></script>
 </body>
 </html>
