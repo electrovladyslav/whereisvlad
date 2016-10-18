@@ -86,4 +86,13 @@
             container: DOMgalleries[i]
         });
     }
+
+    //предзагрузка
+    debugger;
+    var imgs = document.querySelectorAll('.thumbs img');
+    for (i = 0; i < imgs.length; i++) {
+        var url = imgs[i].src;
+        var img = document.createElement('img');
+        img.src = url.slice(0, -10) + '.jpg';
+    }
 }());
