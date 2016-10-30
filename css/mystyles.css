@@ -72,7 +72,10 @@ body{
 .produced {
 	margin-top: 15px;
 }
- .socials  {
+.fa-heart {
+    color: red;
+}
+.socials  {
 	margin-top: 10px;
 }
 
