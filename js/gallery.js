@@ -88,7 +88,6 @@
     }
 
     //предзагрузка
-    debugger;
     var imgs = document.querySelectorAll('.thumbs img');
     for (i = 0; i < imgs.length; i++) {
         var url = imgs[i].src;

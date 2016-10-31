@@ -57,8 +57,12 @@ body{
 }
 
 .map {
-	min-height: 450px;
-	/*background-color: gray;*/
+	/*min-height: 450px;
+	background-color: gray;*/
+}
+
+#marinetraffic {
+    height: 400px;
 }
 /*
 .container {
